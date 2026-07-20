@@ -14,7 +14,7 @@ def run_scraper():
     options.add_argument('user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36')
 
     driver = webdriver.Chrome(options=options)
-    driver.get("[https://data.10jqka.com.cn/market/lhbyyb/orgcode/ff5f15dad72400af/](https://data.10jqka.com.cn/market/lhbyyb/orgcode/ff5f15dad72400af/)")
+    driver.get("https://data.10jqka.com.cn/market/lhbyyb/orgcode/ff5f15dad72400af/")
 
     all_data = []
     total_pages = 67
