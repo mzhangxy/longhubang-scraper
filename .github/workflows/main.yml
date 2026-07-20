@@ -1,18 +1,18 @@
 name: 运行龙虎榜爬虫
 
 on:
-  workflow_dispatch: # 允许手动点击运行按钮触发
+  workflow_dispatch:
 
 jobs:
   scrape_and_export:
-    runs-on: ubuntu-latest # 使用最新的 Ubuntu 云服务器
+    runs-on: ubuntu-latest
 
     steps:
     - name: 拉取代码
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
 
     - name: 配置 Python 环境
-      uses: actions/setup-python@v4
+      uses: actions/setup-python@v5
       with:
         python-version: '3.10'
 
@@ -25,7 +25,7 @@ jobs:
       run: python scraper.py
 
     - name: 上传 Excel 文件供下载
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: 龙虎榜抓取结果
         path: 龙虎榜数据.xlsx
